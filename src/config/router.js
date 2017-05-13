@@ -185,6 +185,5 @@ export const Root = StackNavigator({
     initialRouteName: 'Index',
     headerMode: 'none',
 
-    //mode: Platform.OS === 'ios' ? 'modal' : 'card',
-    mode: 'modal',
+    mode: Platform.OS === 'ios' ? 'modal' : 'card',
 });

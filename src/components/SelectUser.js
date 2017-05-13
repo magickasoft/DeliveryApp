@@ -31,45 +31,54 @@ class SelectUser extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View style={styles.wrapView}>
-          <TouchableOpacity
-              style={styles.viewImage}
-          >
+      <View style={{ flex:1, backgroundColor:'#22356B', }}>
+          <View style={styles.containerTopImage}>
               <Image
-                  style={{width: scale * 1.19078, height: scale}}
-                  source={imagesApp.applogo}
-              />
-          </TouchableOpacity>
-          <View style={styles.containerBottomImage}>
-              <Image
-                  style={{width: width, height: 40}}
-                  source={imagesApp.bottomArrows}
+                  resizeMode="cover"
+                  style={{width, height: height /1.5}}
+                  source={imagesApp.fondPhoto}
               />
           </View>
-          <View style={styles.containerButton}>
-              <View style={styles.viewBotton}>
-                  <Button
-                      onPress={() => {
-                          navigation.navigate('Register', {accountType: 'sender'});
-                      }}
-                      backgroundColor={'#FFFFFF'}
-                      color={'#000'}
-                      raised
-                      large
-                      borderRadius={100}
-                      title={`${I18n.t('BE_A')} ${I18n.t('SENDER')}`} />
+          <View style={styles.wrapView}>
+              <TouchableOpacity
+                  style={styles.viewImage}
+              >
+                  <Image
+                      style={{width: scale * 1.19078, height: scale}}
+                      source={imagesApp.applogo}
+                  />
+              </TouchableOpacity>
+              <View style={styles.containerBottomImage}>
+                  <Image
+                      style={{width: width, height: 40}}
+                      source={imagesApp.bottomArrows}
+                  />
               </View>
-              <View style={styles.viewBotton}>
-                  <Button
-                      onPress={() => {
-                          navigation.navigate('Register', {accountType: 'driver'});
-                      }}
-                      backgroundColor={'#FFFFFF'}
-                      color={'#000'}
-                      raised
-                      large
-                      borderRadius={100}
-                      title={`${I18n.t('BE_A')} ${I18n.t('DRIVER')}`} />
+              <View style={styles.containerButton}>
+                  <View style={styles.viewBotton}>
+                      <Button
+                          onPress={() => {
+                              navigation.navigate('Register', {accountType: 'sender'});
+                          }}
+                          backgroundColor={'#FFFFFF'}
+                          color={'#000'}
+                          raised
+                          large
+                          borderRadius={100}
+                          title={`${I18n.t('BE_A')} ${I18n.t('SENDER')}`} />
+                  </View>
+                  <View style={styles.viewBotton}>
+                      <Button
+                          onPress={() => {
+                              navigation.navigate('Register', {accountType: 'driver'});
+                          }}
+                          backgroundColor={'#FFFFFF'}
+                          color={'#000'}
+                          raised
+                          large
+                          borderRadius={100}
+                          title={`${I18n.t('BE_A')} ${I18n.t('DRIVER')}`} />
+                  </View>
               </View>
           </View>
       </View>
@@ -79,11 +88,15 @@ class SelectUser extends Component {
 
 const styles = StyleSheet.create({
     wrapView: {
-        backgroundColor:'#22356B',
+        //backgroundColor:'#22356B',
         flex: 1,
         flexDirection: 'column',
         justifyContent:'center',
         // alignItems: 'center'
+    },
+    containerTopImage: {
+        position: 'absolute',
+        top: 0,
     },
     containerBottomImage: {
         position: 'absolute',

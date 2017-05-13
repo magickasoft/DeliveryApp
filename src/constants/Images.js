@@ -4,6 +4,7 @@ const imagesApp = {
     profilphoto: require('../images/profilphoto.png'),
     applogo: require('../images/logo.png'),
     bottomArrows: require('../images/TRAME.png'),
+    fondPhoto: require('../images/FOND_PHOTO.png'),
 };
 
 export default imagesApp
