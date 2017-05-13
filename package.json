@@ -1,0 +1,46 @@
+{
+	"name": "DeliveryApp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"lodash": "^4.17.4",
+		"moment": "^2.18.1",
+		"query-string": "^4.3.4",
+		"react": "16.0.0-alpha.6",
+		"react-native": "0.44.0",
+		"react-native-animatable": "^1.2.0",
+		"react-native-camera": "^0.8.0",
+		"react-native-camera-roll-picker": "^1.1.9",
+		"react-native-communications": "^2.2.1",
+		"react-native-device-info": "^0.10.2",
+		"react-native-elements": "^0.11.2",
+		"react-native-fs": "^2.3.2",
+		"react-native-gifted-spinner": "^0.1.0",
+		"react-native-i18n": "^1.0.0",
+		"react-native-loading-spinner-overlay": "^0.5.0",
+		"react-native-parsed-text": "^0.0.18",
+		"react-native-swiper": "^1.5.4",
+		"react-native-textinput-effects": "^0.3.1",
+		"react-native-uploader": "^0.0.10",
+		"react-native-vector-icons": "^4.1.1",
+		"react-navigation": "^1.0.0-beta.9",
+		"react-redux": "^5.0.4",
+		"redux": "^3.6.0",
+		"redux-logger": "^3.0.1",
+		"redux-persist": "^4.8.0",
+		"redux-thunk": "^2.2.0"
+	},
+	"devDependencies": {
+		"babel-jest": "20.0.1",
+		"babel-preset-react-native": "1.9.2",
+		"jest": "20.0.1",
+		"react-test-renderer": "16.0.0-alpha.6"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
