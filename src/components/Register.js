@@ -8,6 +8,7 @@ import {
     Image,
     Dimensions,
     TextInput,
+    Platform,
 } from 'react-native';
 import {
     Button,
@@ -98,9 +99,9 @@ class Register extends Component {
                 <View style={{paddingTop: 20,paddingLeft: 20, paddingRight: 20, paddingBottom: 0,}}>
                     <View style={styles.viewBotton}>
                         <Button
-                            // onPress={() => {
-                            //     navigation.navigate('Login', {});
-                            // }}
+                             onPress={() => {
+                                 navigation.navigate('VerificateCode', {});
+                            }}
                             backgroundColor={'#44B049'}
                             raised
                             large

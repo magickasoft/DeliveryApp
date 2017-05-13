@@ -19,6 +19,7 @@ import LoginStatus from '../containers/LoginStatusContainer';
 import Login from '../containers/LoginContainer';
 import Register from '../containers/RegisterContainer';
 import SelectUser from '../containers/SelectUserContainer';
+import VerificateCode from '../containers/VerificateCodeContainer';
 
 import { configData } from '../branding/index';
 import I18n from '../i18n/index'
@@ -95,7 +96,17 @@ export const IndexStack = StackNavigator({
             },
         },
     },
-
+    VerificateCode: {
+        screen: VerificateCode,
+        navigationOptions: {
+            title: I18n.t('VERIFICATION'),
+            headerBackTitle: null,
+            headerTintColor:'#fafff4',
+            headerStyle:{
+                backgroundColor:'#22356B',
+            },
+        },
+    },
 }, {
     mode: 'card',
     //headerMode: 'none',

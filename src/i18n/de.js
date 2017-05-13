@@ -1,4 +1,8 @@
 module.exports = {
+    PLEASE_INTER: 'Please enter.',
+    TEXT_SEND_VERIFICATION: 'We have sent verification taken to your number.',
+    VERIFY: 'Verify',
+    VERIFICATION:'Verification',
     TERMS: 'Terms',
     PRIVACY_POLICY: 'Privacy Policy',
     AND: 'and',
