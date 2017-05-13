@@ -1,7 +1,7 @@
-Dentasol app Rn project
+DeliveryApp app Rn project
 ## Install global packages 
 ```bash
-npm install -g yo generator-rn-toolbox
+npm install -g yo generator-rn-toolbox yarn
 ```
 ## Install
 ```bash
