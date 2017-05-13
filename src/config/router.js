@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Platform,
+} from 'react-native';
 import { TabNavigator, StackNavigator, DrawerNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
@@ -12,6 +15,8 @@ import CameraRollPicker from '../containers/CameraRollPickerContainer';
 import SendInfo from '../containers/SendInformationContainer';
 import LaborNews from '../components/LaborDetailWebView';
 import CameraPicker from '../containers/CameraContainer';
+import LoginStatus from '../containers/LoginStatusContainer';
+import Login from '../containers/LoginContainer';
 
 import { configData } from '../branding/index';
 import I18n from '../i18n/index'
@@ -34,11 +39,43 @@ export const FeedStack = StackNavigator({
     }),
   },
 }, {
-    mode: 'modal',
-    headerMode: 'none',
+    //mode: 'modal',
+    //headerMode: 'none',
 });
 
+export const IndexStack = StackNavigator({
+    LoginStatus: {
+        screen: LoginStatus,
+        navigationOptions: {
+            title: '',
+            headerBackTitle: null,
+            headerStyle:{
+                backgroundColor:'#22356B',
+            },
+            //header: null,
+        },
+    },
+    Login: {
+        screen: Login,
+        navigationOptions: {
+            title: I18n.t('LOGIN'),
+            headerBackTitle: null,
+            headerTintColor:'#fafff4',
+            headerStyle:{
+                backgroundColor:'#22356B',
+            },
+        },
+    },
+}, {
+    mode: 'card',
+    //headerMode: 'none',
+});
+
+
 export const Root = StackNavigator({
+    Index: {
+        screen: IndexStack,
+    },
     Home: {
         screen: Home,
         navigationOptions: {
@@ -50,6 +87,10 @@ export const Root = StackNavigator({
         screen: LaborDetail,
         navigationOptions: {
             title: I18n.t('LABOR'),
+            headerTintColor:'#fafff4',
+            headerStyle:{
+                backgroundColor:'#22356B',
+            }
         },
     },
     TakePhoto: {
@@ -108,6 +149,8 @@ export const Root = StackNavigator({
     //     }),
     // },
 }, {
-  //mode: 'card',
-  //headerMode: 'none',
+    initialRouteName: 'Index',
+    headerMode: 'none',
+
+    mode: Platform.OS === 'ios' ? 'modal' : 'card',
 });

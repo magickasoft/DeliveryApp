@@ -1,4 +1,12 @@
 module.exports = {
+    ERROR_MESSAGE: 'Error message',
+    EMAIL: 'Email',
+    PASSWORD: 'Password',
+    OR: 'or',
+    LOG_IN: 'Log in',
+    LOGIN_WITH_FB: 'Login with Facebook',
+    LOGIN: 'Login',
+    REGISTR: 'Register',
     LABOR: 'Info Labor',
     PRAXIS: 'Praxis',
     WEBSITE: 'Webseite',
