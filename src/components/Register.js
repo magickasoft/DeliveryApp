@@ -26,13 +26,15 @@ import { toCapitalise } from '../utils/common';
 const { width, height } = Dimensions.get('window');
 const scale = width > height ? height / 2.1 : width / 2.1 ;
 
-class Login extends Component {
+class Register extends Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
+        userName:'',
         email: '',
         password: '',
+        phone: '',
     };
     this.onButtonPress = this.onButtonPress.bind(this);
   }
@@ -51,6 +53,16 @@ class Login extends Component {
             <ScrollView style={styles.wrapView}>
 
                 <View style={styles.containerTextInput}>
+                    <Hoshi
+                        label={I18n.t('USER_NAME')}
+                        onChangeText={(userName) => {
+                            this.setState({ userName });
+                        }}
+                        value={this.state.userName}
+                        borderColor={'#44B049'}
+                        style={{backgroundColor: 'transparent',}}
+                    />
+                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
                     <Hoshi
                         label={I18n.t('EMAIL')}
                         onChangeText={(email) => {
@@ -72,15 +84,17 @@ class Login extends Component {
                         style={{backgroundColor: 'transparent',}}
                     />
                     <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
-
-                    <View style={styles.buttonContent}>
-                        <TouchableOpacity onPress={() => {
-
+                    <Hoshi
+                        label={I18n.t('PHONE_NUMBER')}
+                        onChangeText={(phone) => {
+                            this.setState({ phone });
                         }}
-                        >
-                            <Text style={{color: '#44B049', fontSize: 16}}>{`${I18n.t('FORGOT_PASSWORD')}${I18n.t('QUESTION')}`}</Text>
-                        </TouchableOpacity>
-                    </View>
+                        value={this.state.phone}
+                        borderColor={'#44B049'}
+                        style={{backgroundColor: 'transparent',}}
+                    />
+                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                        <Text style={{backgroundColor: 'transparent', marginTop: 15, color: '#939393', fontSize: 16, textAlign: 'center',}}>{I18n.t('TEXT_VERIFICATION_SMS')}</Text>
                 </View>
                 <View style={styles.containerButton}>
                     <View style={styles.viewBotton}>
@@ -92,12 +106,7 @@ class Login extends Component {
                             raised
                             large
                             borderRadius={100}
-                            title={I18n.t('LOG_IN')} />
-                    </View>
-                    <View style={styles.descriptionView}>
-                        <View style={[styles.lineView]}></View>
-                        <Text style={styles.actionText}>{I18n.t('OR').toUpperCase()}</Text>
-                        <View style={[styles.lineView]}></View>
+                            title={I18n.t('REGISTR')} />
                     </View>
                     <View style={styles.viewBotton}>
                         <Button
@@ -110,7 +119,7 @@ class Login extends Component {
                             large
                             icon={{name: 'facebook', type: 'font-awesome'}}
                             borderRadius={100}
-                            title={`${I18n.t('LOGIN')} ${I18n.t('WITH')} ${toCapitalise(I18n.t('FACEBOOK'))}`} />
+                            title={`${I18n.t('REGISTR')} ${I18n.t('WITH')} ${toCapitalise(I18n.t('FACEBOOK'))}`} />
                     </View>
                 </View>
             </ScrollView>
@@ -121,9 +130,10 @@ class Login extends Component {
 
 const styles = StyleSheet.create({
     buttonContent: {
-        alignItems: 'flex-end',
+
     },
     containerTextInput: {
+        //borderTopColor: '#8F8F8F',
         backgroundColor: 'transparent',
         width: width - 40,
         marginLeft: 20,
@@ -177,8 +187,8 @@ const styles = StyleSheet.create({
       marginBottom: 15,
     },
     scrollView: {
-        backgroundColor:'#fff',
+        // backgroundColor:'#fff',
     },
 });
 
-export default Login;
+export default Register;

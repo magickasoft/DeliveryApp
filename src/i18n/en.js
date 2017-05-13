@@ -1,4 +1,9 @@
 module.exports = {
+    PHONE_NUMBER: 'Phone number',
+    USER_NAME: 'User Name',
+    TEXT_VERIFICATION_SMS: 'We’ll send a verification code via SMS to confirm your mobile number',
+    WITH: 'with',
+    FACEBOOK: 'facebook',
     QUESTION: '?',
     FORGOT_PASSWORD: 'Forgot password',
     ERROR_MESSAGE: 'Error message',

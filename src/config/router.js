@@ -17,6 +17,7 @@ import LaborNews from '../components/LaborDetailWebView';
 import CameraPicker from '../containers/CameraContainer';
 import LoginStatus from '../containers/LoginStatusContainer';
 import Login from '../containers/LoginContainer';
+import Register from '../containers/RegisterContainer';
 
 import { configData } from '../branding/index';
 import I18n from '../i18n/index'
@@ -59,6 +60,17 @@ export const IndexStack = StackNavigator({
         screen: Login,
         navigationOptions: {
             title: I18n.t('LOGIN'),
+            headerBackTitle: null,
+            headerTintColor:'#fafff4',
+            headerStyle:{
+                backgroundColor:'#22356B',
+            },
+        },
+    },
+    Register: {
+        screen: Register,
+        navigationOptions: {
+            title: I18n.t('REGISTR'),
             headerBackTitle: null,
             headerTintColor:'#fafff4',
             headerStyle:{
