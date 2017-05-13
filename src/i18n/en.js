@@ -1,4 +1,8 @@
 module.exports = {
+    TERMS: 'Terms',
+    PRIVACY_POLICY: 'Privacy Policy',
+    AND: 'and',
+    TEXT_IGREE_COND: 'By register, I agree to DriveDrop’s',
     DRIVER: 'Driver',
     SENDER: 'Sender',
     BE_A: 'Be a',

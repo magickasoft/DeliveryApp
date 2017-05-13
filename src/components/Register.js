@@ -51,7 +51,6 @@ class Register extends Component {
                 />
             </View>
             <ScrollView style={styles.wrapView}>
-
                 <View style={styles.containerTextInput}>
                     <Hoshi
                         label={I18n.t('USER_NAME')}
@@ -96,7 +95,7 @@ class Register extends Component {
                     <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
                         <Text style={{backgroundColor: 'transparent', marginTop: 15, color: '#939393', fontSize: 16, textAlign: 'center',}}>{I18n.t('TEXT_VERIFICATION_SMS')}</Text>
                 </View>
-                <View style={styles.containerButton}>
+                <View style={{paddingTop: 20,paddingLeft: 20, paddingRight: 20, paddingBottom: 0,}}>
                     <View style={styles.viewBotton}>
                         <Button
                             // onPress={() => {
@@ -122,6 +121,27 @@ class Register extends Component {
                             title={`${I18n.t('REGISTR')} ${I18n.t('WITH')} ${toCapitalise(I18n.t('FACEBOOK'))}`} />
                     </View>
                 </View>
+                <View style={{paddingTop: 0,paddingLeft: 20, paddingRight: 20, paddingBottom: 20,}}>
+
+                    <Text style={{backgroundColor: 'transparent', marginTop: 15, color: '#939393', fontSize: 16, textAlign: 'center',}}>{I18n.t('TEXT_IGREE_COND')}</Text>
+                    <View style={styles.buttonContent}>
+                        <TouchableOpacity onPress={() => {
+
+                        }}
+                        >
+                            <Text style={{color: '#109CDA', fontSize: 16}}>{`${I18n.t('PRIVACY_POLICY')} `}</Text>
+                        </TouchableOpacity>
+                        <Text style={{backgroundColor: 'transparent', color: '#939393', fontSize: 16,}}>{I18n.t('AND')}</Text>
+                        <TouchableOpacity onPress={() => {
+
+                        }}
+                        >
+                            <Text style={{color: '#109CDA', fontSize: 16}}>{` ${I18n.t('TERMS')} `}</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={{height: 40,}}>
+                </View>
             </ScrollView>
         </View>
     );
@@ -130,7 +150,13 @@ class Register extends Component {
 
 const styles = StyleSheet.create({
     buttonContent: {
-
+        //width: width - 40,
+        marginLeft: 20,
+        marginTop: 0,
+        flexDirection: 'row',
+        alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     containerTextInput: {
         //borderTopColor: '#8F8F8F',
