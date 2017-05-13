@@ -1,4 +1,6 @@
 module.exports = {
+    QUESTION: '?',
+    FORGOT_PASSWORD: 'Forgot password',
     ERROR_MESSAGE: 'Error message',
     EMAIL: 'Email',
     PASSWORD: 'Password',

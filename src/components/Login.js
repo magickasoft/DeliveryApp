@@ -39,73 +39,86 @@ class Login extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View style={styles.wrapView}>
+        <View style={{ flex:1, backgroundColor:'#fff', }}>
+            <View style={styles.containerBottomImage}>
+                <Image
+                    style={{width: width, height: 40}}
+                    source={imagesApp.bottomArrows}
+                />
+            </View>
+            <ScrollView style={styles.wrapView}>
 
-          <View style={styles.containerBottomImage}>
-              <Image
-                  style={{width: width, height: 40}}
-                  source={imagesApp.bottomArrows}
-              />
-          </View>
-          <View style={styles.containerTextInput}>
-              <Hoshi
-                  label={I18n.t('EMAIL')}
-                  onChangeText={(email) => {
-                      this.setState({ email });
-                  }}
-                  value={this.state.email}
-                  borderColor={'#44B049'}
-              />
-              <FormValidationMessage>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
-              <Hoshi
-                  label={I18n.t('PASSWORD')}
-                  secureTextEntry={true}
-                  onChangeText={(password) => {
-                      this.setState({ password });
-                  }}
-                  value={this.state.password}
-                  borderColor={'#44B049'}
-              />
-              <FormValidationMessage>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
-          </View>
-          <View style={styles.containerButton}>
-              <View style={styles.viewBotton}>
-                  <Button
-                      // onPress={() => {
-                      //     navigation.navigate('Login', {});
-                      // }}
-                      backgroundColor={'#44B049'}
-                      raised
-                      large
-                      borderRadius={100}
-                      title={I18n.t('LOG_IN')} />
-              </View>
-              <View style={styles.descriptionView}>
-                  <View style={[styles.lineView]}></View>
-                  <Text style={styles.actionText}>{I18n.t('OR').toUpperCase()}</Text>
-                  <View style={[styles.lineView]}></View>
-              </View>
-              <View style={styles.viewBotton}>
-                  <Button
-                      // onPress={() => {
-                      //     navigation.navigate('Register', {});
-                      // }}
-                      backgroundColor={'#355EB2'}
-                      color={'#fff'}
-                      raised
-                      large
-                      icon={{name: 'facebook', type: 'font-awesome'}}
-                      borderRadius={100}
-                      title={I18n.t('LOGIN_WITH_FB')} />
-              </View>
-          </View>
-      </View>
+                <View style={styles.containerTextInput}>
+                    <Hoshi
+                        label={I18n.t('EMAIL')}
+                        onChangeText={(email) => {
+                            this.setState({ email });
+                        }}
+                        value={this.state.email}
+                        borderColor={'#44B049'}
+                    />
+                    <FormValidationMessage>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    <Hoshi
+                        label={I18n.t('PASSWORD')}
+                        secureTextEntry={true}
+                        onChangeText={(password) => {
+                            this.setState({ password });
+                        }}
+                        value={this.state.password}
+                        borderColor={'#44B049'}
+                    />
+                    <FormValidationMessage>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
 
+                    <View style={styles.buttonContent}>
+                        <TouchableOpacity onPress={() => {
+
+                        }}
+                        >
+                            <Text style={{color: '#44B049', fontSize: 16}}>{`${I18n.t('FORGOT_PASSWORD')}${I18n.t('QUESTION')}`}</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.containerButton}>
+                    <View style={styles.viewBotton}>
+                        <Button
+                            // onPress={() => {
+                            //     navigation.navigate('Login', {});
+                            // }}
+                            backgroundColor={'#44B049'}
+                            raised
+                            large
+                            borderRadius={100}
+                            title={I18n.t('LOG_IN')} />
+                    </View>
+                    <View style={styles.descriptionView}>
+                        <View style={[styles.lineView]}></View>
+                        <Text style={styles.actionText}>{I18n.t('OR').toUpperCase()}</Text>
+                        <View style={[styles.lineView]}></View>
+                    </View>
+                    <View style={styles.viewBotton}>
+                        <Button
+                            // onPress={() => {
+                            //     navigation.navigate('Register', {});
+                            // }}
+                            backgroundColor={'#355EB2'}
+                            color={'#fff'}
+                            raised
+                            large
+                            icon={{name: 'facebook', type: 'font-awesome'}}
+                            borderRadius={100}
+                            title={I18n.t('LOGIN_WITH_FB')} />
+                    </View>
+                </View>
+            </ScrollView>
+        </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+    buttonContent: {
+        alignItems: 'flex-end',
+    },
     containerTextInput: {
         width: width - 40,
         marginLeft: 20,
@@ -135,10 +148,9 @@ const styles = StyleSheet.create({
         color: '#7F7F7F'
     },
     wrapView:{
-        backgroundColor:'#fff',
         flex: 1,
         flexDirection: 'column',
-        justifyContent:'flex-start',
+        //justifyContent:'flex-start',
         // alignItems: 'center'
     },
     containerBottomImage: {
