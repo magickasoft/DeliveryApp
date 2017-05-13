@@ -19,7 +19,7 @@ import imagesApp from '../constants/Images';
 const { width, height } = Dimensions.get('window');
 const scale = width > height ? height / 2.3 : width / 2.3 ;
 
-class LoginStatus extends Component {
+class SelectUser extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -50,25 +50,26 @@ class LoginStatus extends Component {
               <View style={styles.viewBotton}>
                   <Button
                       onPress={() => {
-                          navigation.navigate('Login', {});
-                      }}
-                      backgroundColor={'#44B049'}
-                      raised
-                      large
-                      borderRadius={100}
-                      title={I18n.t('LOG_IN')} />
-              </View>
-              <View style={styles.viewBotton}>
-                  <Button
-                      onPress={() => {
-                          navigation.navigate('SelectUser', {});
+                          navigation.navigate('Register', {accountType: 'sender'});
                       }}
                       backgroundColor={'#FFFFFF'}
                       color={'#000'}
                       raised
                       large
                       borderRadius={100}
-                      title={I18n.t('REGISTR')} />
+                      title={`${I18n.t('BE_A')} ${I18n.t('SENDER')}`} />
+              </View>
+              <View style={styles.viewBotton}>
+                  <Button
+                      onPress={() => {
+                          navigation.navigate('Register', {accountType: 'driver'});
+                      }}
+                      backgroundColor={'#FFFFFF'}
+                      color={'#000'}
+                      raised
+                      large
+                      borderRadius={100}
+                      title={`${I18n.t('BE_A')} ${I18n.t('DRIVER')}`} />
               </View>
           </View>
       </View>
@@ -77,7 +78,7 @@ class LoginStatus extends Component {
 }
 
 const styles = StyleSheet.create({
-    wrapView:{
+    wrapView: {
         backgroundColor:'#22356B',
         flex: 1,
         flexDirection: 'column',
@@ -108,4 +109,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default LoginStatus;
+export default SelectUser;

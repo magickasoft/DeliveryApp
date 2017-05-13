@@ -18,6 +18,7 @@ import CameraPicker from '../containers/CameraContainer';
 import LoginStatus from '../containers/LoginStatusContainer';
 import Login from '../containers/LoginContainer';
 import Register from '../containers/RegisterContainer';
+import SelectUser from '../containers/SelectUserContainer';
 
 import { configData } from '../branding/index';
 import I18n from '../i18n/index'
@@ -43,7 +44,23 @@ export const FeedStack = StackNavigator({
     //mode: 'modal',
     //headerMode: 'none',
 });
-
+export const SelectUserStack = StackNavigator({
+    SelectUser: {
+        screen: SelectUser,
+        navigationOptions: {
+            title: '',
+            headerBackTitle: null,
+            headerTintColor:'#fafff4',
+            headerStyle:{
+                backgroundColor:'#22356B',
+            },
+            header: null,
+        },
+    }
+}, {
+    mode: 'modal',
+    //headerMode: 'none',
+});
 export const IndexStack = StackNavigator({
     LoginStatus: {
         screen: LoginStatus,
@@ -78,6 +95,7 @@ export const IndexStack = StackNavigator({
             },
         },
     },
+
 }, {
     mode: 'card',
     //headerMode: 'none',
@@ -87,6 +105,9 @@ export const IndexStack = StackNavigator({
 export const Root = StackNavigator({
     Index: {
         screen: IndexStack,
+    },
+    SelectUser: {
+        screen: SelectUserStack,
     },
     Home: {
         screen: Home,
@@ -164,5 +185,6 @@ export const Root = StackNavigator({
     initialRouteName: 'Index',
     headerMode: 'none',
 
-    mode: Platform.OS === 'ios' ? 'modal' : 'card',
+    //mode: Platform.OS === 'ios' ? 'modal' : 'card',
+    mode: 'modal',
 });

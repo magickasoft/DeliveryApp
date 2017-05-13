@@ -1,4 +1,7 @@
 module.exports = {
+    DRIVER: 'Driver',
+    SENDER: 'Sender',
+    BE_A: 'Be a',
     PHONE_NUMBER: 'Phone number',
     USER_NAME: 'User Name',
     TEXT_VERIFICATION_SMS: 'We’ll send a verification code via SMS to confirm your mobile number',
