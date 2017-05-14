@@ -60,7 +60,7 @@ class Login extends Component {
                         borderColor={'#44B049'}
                         style={{backgroundColor: 'transparent',}}
                     />
-                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    {/*<FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>*/}
                     <Hoshi
                         label={I18n.t('PASSWORD')}
                         secureTextEntry={true}
@@ -71,7 +71,7 @@ class Login extends Component {
                         borderColor={'#44B049'}
                         style={{backgroundColor: 'transparent',}}
                     />
-                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    {/*<FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>*/}
 
                     <View style={styles.buttonContent}>
                         <TouchableOpacity onPress={() => {

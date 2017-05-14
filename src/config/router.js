@@ -63,15 +63,28 @@ export const SelectUserStack = StackNavigator({
     //headerMode: 'none',
 });
 export const IndexStack = StackNavigator({
+    SelectUser: {
+        screen: SelectUser,
+        navigationOptions: {
+            title: '',
+            headerBackTitle: null,
+            headerTintColor:'#fafff4',
+            headerStyle:{
+                backgroundColor:'#22356B',
+            },
+            header: null,
+        },
+    },
     LoginStatus: {
         screen: LoginStatus,
         navigationOptions: {
             title: '',
             headerBackTitle: null,
+            headerTintColor:'#fafff4',
             headerStyle:{
                 backgroundColor:'#22356B',
             },
-            //header: null,
+            header: null,
         },
     },
     Login: {
@@ -117,9 +130,9 @@ export const Root = StackNavigator({
     Index: {
         screen: IndexStack,
     },
-    SelectUser: {
-        screen: SelectUserStack,
-    },
+    // SelectUser: {
+    //     screen: SelectUserStack,
+    // },
     Home: {
         screen: Home,
         navigationOptions: {

@@ -61,7 +61,7 @@ class LoginStatus extends Component {
               <View style={styles.viewBotton}>
                   <Button
                       onPress={() => {
-                          navigation.navigate('SelectUser', {});
+                          navigation.navigate('Register', {});
                       }}
                       backgroundColor={'#FFFFFF'}
                       color={'#000'}

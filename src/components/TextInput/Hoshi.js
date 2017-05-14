@@ -104,7 +104,7 @@ export default class Hoshi extends BaseInput {
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderBottomColor: '#b9c1ca',
   },
   labelContainer: {
@@ -132,6 +132,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 3,
+    height: 2,
   },
 });

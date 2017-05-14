@@ -62,7 +62,7 @@ class Register extends Component {
                         borderColor={'#44B049'}
                         style={{backgroundColor: 'transparent',}}
                     />
-                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    {/*<FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>*/}
                     <Hoshi
                         label={I18n.t('EMAIL')}
                         onChangeText={(email) => {
@@ -72,7 +72,7 @@ class Register extends Component {
                         borderColor={'#44B049'}
                         style={{backgroundColor: 'transparent',}}
                     />
-                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    {/*<FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>*/}
                     <Hoshi
                         label={I18n.t('PASSWORD')}
                         secureTextEntry={true}
@@ -83,7 +83,7 @@ class Register extends Component {
                         borderColor={'#44B049'}
                         style={{backgroundColor: 'transparent',}}
                     />
-                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    {/*<FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>*/}
                     <Hoshi
                         label={I18n.t('PHONE_NUMBER')}
                         onChangeText={(phone) => {
@@ -93,7 +93,7 @@ class Register extends Component {
                         borderColor={'#44B049'}
                         style={{backgroundColor: 'transparent',}}
                     />
-                    <FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>
+                    {/*<FormValidationMessage style={{backgroundColor: 'transparent',}}>{I18n.t('ERROR_MESSAGE')}</FormValidationMessage>*/}
                         <Text style={{backgroundColor: 'transparent', marginTop: 15, color: '#939393', fontSize: 16, textAlign: 'center',}}>{I18n.t('TEXT_VERIFICATION_SMS')}</Text>
                 </View>
                 <View style={{paddingTop: 20,paddingLeft: 20, paddingRight: 20, paddingBottom: 0,}}>

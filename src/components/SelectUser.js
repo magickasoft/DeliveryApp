@@ -58,7 +58,7 @@ class SelectUser extends Component {
                   <View style={styles.viewBotton}>
                       <Button
                           onPress={() => {
-                              navigation.navigate('Register', {accountType: 'sender'});
+                              navigation.navigate('LoginStatus', {accountType: 'sender'});
                           }}
                           backgroundColor={'#FFFFFF'}
                           color={'#000'}
@@ -70,7 +70,7 @@ class SelectUser extends Component {
                   <View style={styles.viewBotton}>
                       <Button
                           onPress={() => {
-                              navigation.navigate('Register', {accountType: 'driver'});
+                              navigation.navigate('LoginStatus', {accountType: 'driver'});
                           }}
                           backgroundColor={'#FFFFFF'}
                           color={'#000'}
